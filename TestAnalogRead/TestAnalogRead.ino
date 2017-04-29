@@ -5,9 +5,13 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int val;
-  val = analogRead(0);
-  analogWrite(3, val);
-  Serial.println(val);
+  int in;
+  int out;
+  in = analogRead(0);
+  out = in / 4;
+  analogWrite(3, out);
+  Serial.print(in);
+  Serial.print(" -> ");
+  Serial.println(out);
   delay(200);
 }
