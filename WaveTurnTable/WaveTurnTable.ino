@@ -107,6 +107,9 @@ void WaitInitialPositionAndTurnOff()
     Status(SLOW);
 
     if(analogRead(BRIGHTNESS_IN) >= THRESHOLD){
+      // resume
+      Serial.println("return to bright.");
+      Status(OFF);
       return;
     }
     
